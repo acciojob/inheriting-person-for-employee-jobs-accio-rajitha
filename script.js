@@ -1,4 +1,5 @@
 // complete this js code
+
 class Person {
 	constructor(name, age){
 		this.name = name;
@@ -9,7 +10,7 @@ class Person {
 	}
 }
 
-class Employee {
+class Employee extends Person {
 	constructor (name, age, jobTitle){
 		super(name,age);
 		this.jobTitle = jobTitle;
