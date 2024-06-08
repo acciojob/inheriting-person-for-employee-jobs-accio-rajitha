@@ -6,9 +6,10 @@ class Person {
     }
 
     greet() {
-        console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
     }
 }
+
 class Employee extends Person {
     constructor(name, age, jobTitle) {
         super(name, age);
@@ -16,15 +17,15 @@ class Employee extends Person {
     }
 
     jobGreet() {
-        console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}`);
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old, and my job title is ${this.jobTitle}`);
     }
 }
+
 let person = new Person("Alice", 25);
-person.greet(); 
+person.greet(); // Should log: "Hello, my name is Alice and I am 25 years old."
 
 let employee = new Employee("Bob", 30, "Manager");
-employee.jobGreet(); 
-
+employee.jobGreet(); // Should log: "Hello, my name is Bob and I am 30 years old, and my job title is Manager"
 
 // Do not change code below this line
 window.Person = Person;
